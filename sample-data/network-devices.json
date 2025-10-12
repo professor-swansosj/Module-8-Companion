@@ -1,0 +1,109 @@
+{
+  "network_devices": [
+    {
+      "id": 1,
+      "hostname": "CORE-RTR-01",
+      "ip_address": "10.0.1.1",
+      "device_type": "router",
+      "vendor": "Cisco",
+      "model": "ISR4321",
+      "os_version": "16.09.03",
+      "location": {
+        "building": "HQ",
+        "floor": 3,
+        "room": "Network Closet A"
+      },
+      "interfaces": [
+        {
+          "name": "GigabitEthernet0/0/0",
+          "ip_address": "192.168.1.1",
+          "subnet_mask": "255.255.255.0",
+          "status": "up",
+          "description": "LAN Interface"
+        },
+        {
+          "name": "GigabitEthernet0/0/1",
+          "ip_address": "203.0.113.1",
+          "subnet_mask": "255.255.255.252",
+          "status": "up",
+          "description": "WAN Interface"
+        }
+      ],
+      "management": {
+        "ssh_enabled": true,
+        "snmp_community": "public",
+        "ntp_server": "pool.ntp.org"
+      }
+    },
+    {
+      "id": 2,
+      "hostname": "ACCESS-SW-01",
+      "ip_address": "10.0.1.10",
+      "device_type": "switch",
+      "vendor": "Cisco",
+      "model": "Catalyst 2960X",
+      "os_version": "15.2(4)E7",
+      "location": {
+        "building": "HQ",
+        "floor": 1,
+        "room": "IDF-A"
+      },
+      "vlans": [
+        {"vlan_id": 10, "name": "USERS", "status": "active"},
+        {"vlan_id": 20, "name": "SERVERS", "status": "active"},
+        {"vlan_id": 30, "name": "GUESTS", "status": "active"},
+        {"vlan_id": 99, "name": "MANAGEMENT", "status": "active"}
+      ],
+      "port_config": {
+        "access_ports": ["Fa0/1-20"],
+        "trunk_ports": ["Gi0/1", "Gi0/2"],
+        "unused_ports": ["Fa0/21-24"]
+      }
+    },
+    {
+      "id": 3,
+      "hostname": "FW-01",
+      "ip_address": "10.0.1.254",
+      "device_type": "firewall",
+      "vendor": "Fortinet",
+      "model": "FortiGate 60E",
+      "os_version": "6.4.8",
+      "location": {
+        "building": "HQ",
+        "floor": 3,
+        "room": "Security Rack"
+      },
+      "security_zones": [
+        {"name": "internal", "interface": "port1", "network": "192.168.1.0/24"},
+        {"name": "external", "interface": "port2", "network": "203.0.113.0/30"},
+        {"name": "dmz", "interface": "port3", "network": "172.16.1.0/24"}
+      ]
+    }
+  ],
+  "network_topology": {
+    "connections": [
+      {
+        "source": {"device": "CORE-RTR-01", "interface": "Gi0/0/0"},
+        "destination": {"device": "ACCESS-SW-01", "interface": "Gi0/1"},
+        "connection_type": "ethernet"
+      },
+      {
+        "source": {"device": "CORE-RTR-01", "interface": "Gi0/0/1"},
+        "destination": {"device": "FW-01", "interface": "port1"},
+        "connection_type": "ethernet"
+      }
+    ]
+  },
+  "monitoring": {
+    "snmp_settings": {
+      "version": "v2c",
+      "community": "public",
+      "trap_destination": "10.0.1.100"
+    },
+    "syslog": {
+      "server": "10.0.1.101",
+      "facility": "local0",
+      "severity": "informational"
+    }
+  }
+}
