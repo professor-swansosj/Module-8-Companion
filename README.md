@@ -1,18 +1,20 @@
-# 🐳 Module 8: Docker Containers - Your Network Automation Playground
+# Module 8 Companion - Docker Containers for Network Automation
+
+## Software Defined Networking Course
 
 > **Ready to containerize your network tools?** This is where everything you've learned comes together in portable, consistent environments!
 
-## 🎯 What You'll Master
+## 🎯 What You'll Practice
 
 Transform from "What's a container?" to confidently building and running your own network automation services in isolated, portable environments. Docker isn't just for developers—it's your secret weapon for consistent, reliable network automation!
 
-## 🚀 Learning Journey
+## � Prerequisites
 
-**Start Here:** Module 01 - Work through each module in order  
-**Estimated Time:** 3-4 hours of hands-on practice  
-**Prerequisites:** Basic command line skills and Python knowledge from previous modules
+- **Estimated Time:** 3-4 hours of hands-on practice  
+- **Requirements:** Basic command line skills and Python knowledge from previous modules
+- **Start Here:** Module 01 - Work through each module in order
 
-### Your Adventure Path
+## 🗂 Learning Path
 
 | Module | What You'll Discover | Why It Matters |
 |--------|---------------------|----------------|
@@ -23,7 +25,7 @@ Transform from "What's a container?" to confidently building and running your ow
 | **05_dad_joke_container** | Interactive containerized apps | Build engaging network utilities |
 | **06_fastapi_service** | Persistent web services | Deploy real network services |
 
-## 💡 Learning Objectives
+## � Learning Objectives
 
 By the end of this companion, you'll confidently:
 
@@ -33,7 +35,7 @@ By the end of this companion, you'll confidently:
 - Create containerized network automation services
 - Deploy persistent web services that stay running
 
-## 🛠 Quick Setup
+## � Quick Setup
 
 **Before diving in, verify Docker is ready:**
 
@@ -45,14 +47,14 @@ docker run hello-world
 
 > 💡 **Need Docker?** Your graded labs already use DevContainers, so Docker should be installed. If not, ask your instructor!
 
-## 🎮 How to Use This Companion
+## � Practice Callouts
 
 1. **Start with Module 01** - Don't skip ahead, each builds on the last!
 2. **Practice Everything** - This is your sandbox, experiment freely
 3. **Complete All TODOs** - The magic happens when you code, not just read
 4. **Celebrate Small Wins** - Each working command is progress!
 
-## 🔥 Why This Matters
+## 🌟 Why This Matters
 
 Network automation in containers means:
 
@@ -61,8 +63,8 @@ Network automation in containers means:
 - **Isolated testing** without breaking your host system
 - **Professional deployment** of network services
 
-Ready to containerize your network automation skills? **Start with [01_exploration](01_exploration/README.md)** and let's build something amazing!
+## 🎉 Ready to Containerize?
 
----
+Ready to containerize your network automation skills? **Start with [01_exploration](01_exploration/README.md)** and let's build something amazing!
 
 > 🎉 **You've got this!** Remember: containers might seem complex, but you're just packaging your Python scripts in a way that makes them incredibly portable and reliable.
