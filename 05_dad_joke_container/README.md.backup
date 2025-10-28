@@ -1,0 +1,290 @@
+# 05: Dad Joke Container - Interactive Network Service
+
+## 🎯 Mission
+
+Build a container that fetches dad jokes from the internet! This teaches you to create containers that interact with external APIs and handle network requests—essential skills for network automation.
+
+## 🎖 Goals
+
+- [ ] Create a Python script that fetches data from an API
+- [ ] Handle network requests in a containerized environment
+- [ ] Build an image with external dependencies (requests library)
+- [ ] Understand container networking basics
+- [ ] Create an entertaining and functional container
+
+## 💡 Key Concepts
+
+**API Integration**: Making HTTP requests from inside containers  
+**Dependencies**: Installing Python packages in Docker images  
+**Container Networking**: How containers access the internet  
+**Error Handling**: What happens when network requests fail
+
+## 🎭 The Dad Joke Fetcher
+
+### Step 1: Create the Joke Fetcher Script
+
+**File:** `joke_fetcher.py`
+
+```python
+"""
+TODO: Complete this dad joke fetching script
+Hint: Use the requests library to fetch jokes from an API
+"""
+
+import requests
+import json
+import random
+
+def fetch_dad_joke():
+    """
+    TODO: Fetch a dad joke from the API
+    Hint: Use https://icanhazdadjoke.com/ API
+    Set headers: {'Accept': 'application/json'}
+    """
+    # TODO: Make API request and return joke text
+    pass
+
+def fetch_programming_joke():
+    """
+    TODO: Fetch a programming joke as alternative
+    Hint: Use https://official-joke-api.appspot.com/random_joke
+    This returns JSON with setup and punchline
+    """
+    # TODO: Fetch programming joke and format it nicely
+    pass
+
+def display_joke_with_style(joke_text):
+    """
+    TODO: Display the joke with ASCII art borders
+    Hint: Create a nice border around the joke text
+    """
+    # TODO: Make the joke display look awesome!
+    # Add borders, emojis, or ASCII art
+    pass
+
+def handle_network_error():
+    """
+    TODO: Handle case when internet is not available
+    Hint: Display a fallback joke or error message
+    """
+    fallback_jokes = [
+        "Why don't containers ever get lost? Because they always know their image!",
+        "What did the Docker container say to the VM? You're too heavy, I travel light!",
+        "Why do network engineers love containers? Because they're always in a good network!"
+    ]
+    # TODO: Display a random fallback joke
+    pass
+
+def main():
+    """Main joke fetching function"""
+    print("🎭 Dad Joke Container Service")
+    print("=" * 40)
+    
+    # TODO: Try to fetch jokes, handle errors gracefully
+    # 1. Try to fetch a dad joke
+    # 2. If that fails, try programming joke
+    # 3. If all fails, show fallback joke
+    # 4. Display with style!
+    
+    pass
+
+if __name__ == "__main__":
+    main()
+```
+
+### Step 2: Create Requirements File
+
+**File:** `requirements.txt`
+
+```txt
+requests==2.31.0
+```
+
+### Step 3: Create Advanced Dockerfile
+
+**File:** `Dockerfile`
+
+```dockerfile
+# TODO: Complete this advanced Dockerfile with dependencies
+# Hint: Install Python packages using requirements.txt
+
+# TODO: Use Python base image
+FROM python:3.11-slim
+
+# TODO: Set working directory
+WORKDIR /app
+
+# TODO: Copy requirements file first (for better Docker layer caching)
+COPY requirements.txt .
+
+# TODO: Install Python dependencies
+# Hint: Use pip install -r requirements.txt
+RUN 
+
+# TODO: Copy your application code
+COPY joke_fetcher.py .
+
+# TODO: Set the default command
+CMD ["python", "joke_fetcher.py"]
+```
+
+### Step 4: Build and Test
+
+```bash
+# Build your joke container
+docker build -t dad-joke-service .
+
+# Run it and enjoy the jokes!
+docker run dad-joke-service
+
+# Run it multiple times to see different jokes
+docker run dad-joke-service
+docker run dad-joke-service
+```
+
+## 🎯 Practice Challenge
+
+Create a joke service manager with multiple features:
+
+**File:** `joke_service_manager.py`
+
+```python
+"""
+TODO: Complete this advanced joke service manager
+Hint: Add features like joke caching, multiple APIs, and statistics
+"""
+
+import subprocess
+import json
+import time
+
+def build_joke_service():
+    """
+    TODO: Build the dad joke service image
+    Hint: Use docker build command
+    """
+    print("🔨 Building Dad Joke Service...")
+    # TODO: Build the Docker image
+    pass
+
+def run_single_joke():
+    """
+    TODO: Run container once and show output
+    Hint: Use docker run dad-joke-service
+    """
+    print("🎭 Fetching a single joke...")
+    # TODO: Run container and capture output
+    pass
+
+def run_joke_marathon(count=5):
+    """
+    TODO: Run container multiple times for joke marathon
+    Hint: Loop and run container multiple times
+    """
+    print(f"🏃 Running joke marathon ({count} jokes)...")
+    # TODO: Run container multiple times with delay between
+    pass
+
+def test_offline_mode():
+    """
+    TODO: Test what happens when network is disabled
+    Hint: Run container with --network none flag
+    """
+    print("📴 Testing offline fallback...")
+    # TODO: Run container without network access
+    pass
+
+def get_container_logs():
+    """
+    TODO: Show logs from joke containers
+    Hint: Use docker logs command
+    """
+    print("📋 Container execution logs:")
+    # TODO: Get and display logs from containers
+    pass
+
+def cleanup_joke_containers():
+    """
+    TODO: Clean up all joke service containers
+    Hint: Remove containers created by this image
+    """
+    print("🧹 Cleaning up joke containers...")
+    # TODO: Remove stopped containers
+    pass
+
+def main():
+    """Main joke service management"""
+    print("🎭 Dad Joke Service Manager")
+    print("=" * 35)
+    
+    # TODO: Create an interactive menu:
+    # 1. Build service
+    # 2. Run single joke
+    # 3. Run joke marathon
+    # 4. Test offline mode
+    # 5. View logs
+    # 6. Cleanup
+    
+    pass
+
+if __name__ == "__main__":
+    main()
+```
+
+## 🎉 Success Criteria
+
+Your joke service should:
+
+- Fetch real jokes from the internet
+- Handle network failures gracefully
+- Display jokes with style and formatting
+- Build and run successfully as a container
+- Show different jokes on multiple runs
+
+## 🌐 Container Networking Notes
+
+```bash
+# Test container internet access
+docker run dad-joke-service
+
+# Test without network access
+docker run --network none dad-joke-service
+
+# Run with specific network settings
+docker run --dns 8.8.8.8 dad-joke-service
+```
+
+## 🔧 API Integration Tips
+
+**Popular joke APIs to try:**
+
+- `https://icanhazdadjoke.com/` - Dad jokes (requires Accept header)
+- `https://official-joke-api.appspot.com/random_joke` - Programming jokes
+- `https://v2.jokeapi.dev/joke/Programming` - Programming jokes with categories
+
+**Error handling patterns:**
+
+```python
+try:
+    response = requests.get(url, timeout=5)
+    response.raise_for_status()
+    return response.json()
+except requests.exceptions.RequestException:
+    # Handle network errors
+    return None
+```
+
+## 🔍 Check Yourself
+
+1. Why do we copy `requirements.txt` before copying the application code?
+2. What happens if the API is down when your container runs?
+3. How can you test your container's behavior without internet access?
+4. Why is it important to handle network errors in containerized applications?
+
+## 🚀 Ready for More?
+
+Excellent! Your container can now interact with the outside world. Time to build something that stays running with **[06_fastapi_service](../06_fastapi_service/README.md)** - a persistent web service!
+
+---
+
+> **You're networking like a pro!** 🌐 Your container can now fetch data from the internet! This is the foundation for building network automation tools that interact with APIs, devices, and services.
