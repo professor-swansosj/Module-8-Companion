@@ -199,7 +199,7 @@ docker run --name [name] [image] # Run with custom name
 
 ## 🚀 Ready for More?
 
-Perfect! You can now run containers and manage them with command-line tools. Next, let's explore what's inside containers with **[03_interactive_containers](../03_interactive_containers/README.md)**!
+Perfect! You can now run containers and manage them with command-line tools. Next, let's explore what's inside containers with **[Section 03:_Interactive_Containers](../03_interactive_containers/README.md)**!
 
 ---
 
