@@ -153,7 +153,7 @@ You've mastered Docker exploration when you can:
 
 ## 🚀 Ready for More?
 
-Perfect! You now know how to discover Docker commands on your own. Time to **[02_hello_world](../02_hello_world/README.md)** and run your first container using what you've learned!
+Perfect! You now know how to discover Docker commands on your own. Time to go to **[Section 02:_Hello_World](../02_hello_world/README.md)** and run your first container using what you've learned!
 
 ---
 
