@@ -1,4 +1,4 @@
-# 🎭 Module 05: Dad Joke Container - Network Service CLI
+# 🎭 Section 05: Dad Joke Container - Network Service CLI
 
 ## 🎯 Mission Brief
 
@@ -11,7 +11,7 @@ Time for network operations! Build a container that fetches dad jokes from the i
 - **Dependency Management**: Install packages using requirements.txt
 - **Service Testing**: Run and verify networked containers
 
-## � The Adventure Begins
+## 🚀 The Adventure Begins
 
 ### Step 1: Discover Docker Build Options
 
@@ -236,7 +236,7 @@ docker run -it dad-joke-service /bin/bash
 
 ## 🚀 Next Adventure
 
-Outstanding! You've mastered networked containers and CLI management. Ready for **[Module 06: FastAPI Service](../06_fastapi_service/README.md)** - build persistent web services that stay running!
+Outstanding! You've mastered networked containers and CLI management. Ready for **[Section 06: FastAPI Service](../06_fastapi_service/README.md)** - build persistent web services that stay running!
 
 ---
 
