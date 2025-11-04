@@ -241,7 +241,7 @@ docker rm [container]       # Remove stopped container
 
 ## 🚀 Ready for More?
 
-Perfect! You can now work with containers interactively and understand their isolation. Time to create your own custom containers in **[04_basic_images](../04_basic_images/README.md)**!
+Perfect! You can now work with containers interactively and understand their isolation. Time to create your own custom containers in **[Section 04: Basic Images](../04_basic_images/README.md)**!
 
 ---
 
