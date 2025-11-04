@@ -355,7 +355,7 @@ docker rmi -f [image]                     # Force remove image
 
 ## 🚀 Ready for More?
 
-Excellent! You can now create custom Docker images from scratch. Time to build something that interacts with the internet in **[05_dad_joke_container](../05_dad_joke_container/README.md)**!
+Excellent! You can now create custom Docker images from scratch. Time to build something that interacts with the internet in **[Section 05: Dad Joke Container](../05_dad_joke_container/README.md)**!
 
 ---
 
