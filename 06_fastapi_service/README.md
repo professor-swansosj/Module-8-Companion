@@ -1,4 +1,4 @@
-# 🚀 Module 06: FastAPI Service - Persistent Web Container CLI
+# 🚀 Section 06: FastAPI Service - Persistent Web Container CLI
 
 ## 🎯 Mission Brief
 
